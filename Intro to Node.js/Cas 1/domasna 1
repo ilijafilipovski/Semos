@@ -1,0 +1,7 @@
+1. Kreirajte domasna1.js
+2. Ispecatete na terminal -> "Hello from homework 1"
+- 1. Zadaca 
+	Kreirajte niza so elementi(samo broevi). So pomos na iterator, izminete ja nizata i vnatre vnesete uslov koj shto kje go zadovoli slednoto baranje:
+	"Najdi go najgolemiot broj od nizata i ispecati go na ekran.""
+- 2. Zadaca
+	Kreirajte funkcija koja sto kje se narekuva "biggestNumber" i kje go najde najgolemiot broj od nizata koja sto kje ja zadadate kako argument pri povik na istata funkcija. Ispecatete go rezultatot.

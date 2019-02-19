@@ -1,0 +1,17 @@
+[
+    {
+        "city": "Skopje",
+        "temp": "2",
+        "time": "21:30"
+    },
+    {
+        "city": "Veles",
+        "temp": "5",
+        "time": "20:30"
+    },
+    {
+        "city": "Kumanovo",
+        "temp": "0",
+        "time": "21:30"
+    }
+]

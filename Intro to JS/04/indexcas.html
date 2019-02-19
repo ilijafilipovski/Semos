@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vezbi so DOM jazli
+	</title>
+	<style type="text/css">
+		.float-right {
+			position: absolute;
+			right: 0;
+		}
+		.red {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul id="lista_na_korisnici">
+		<li>
+			Default
+		</li>
+	</ul>
+</body>
+<script type="text/javascript">
+
+	var iminja = ["Vlatko", "Angela", "Filip", "Jordan"];
+	/* Najdi go html elementot lista */
+	var lista = document.getElementById("lista_na_korisnici");
+
+	for (let i = 0; i < iminja.length; i++) {
+		/* Kreiraj html element */
+		var item = document.createElement("LI");
+
+		/* Kreiraj tekst za elementot */
+		var naslov = document.createTextNode(iminja[i]);
+
+		/* Povrzi gi elementot i tekstot */
+		item.appendChild(naslov);
+
+		/* Dodaj ID na element1ot */
+		item.setAttribute("id", "item_" + i);
+
+		/* Stavi go <li> vo <ul> */
+		lista.appendChild(item);
+	}
+
+	/* Dodavanje i brishenje na vekje definirani CSS klasi */
+	lista.classList.add("float-right", "red");
+	lista.classList.remove("float-right");
+
+	/* Selekcija na elementi spored tip na tag i CSS klasa */
+	console.log(lista.getElementsByTagName("LI"));
+	console.log(document.getElementsByClassName("red"));
+
+	/* Brishenje na elementi (jazli) */
+	var element = document.getElementById("item_1");
+	lista.removeChild(element);
+
+</script>
+</html>

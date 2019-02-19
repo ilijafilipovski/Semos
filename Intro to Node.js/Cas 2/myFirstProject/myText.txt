@@ -1,0 +1,3 @@
+Data to be saved!
+This is new line.'
+' This is new line.
