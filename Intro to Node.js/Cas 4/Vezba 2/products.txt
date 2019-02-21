@@ -1,0 +1,3 @@
+kiwi 5 20
+milk 2 50
+juice 4 60
