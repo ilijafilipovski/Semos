@@ -10,7 +10,7 @@ function proverka(niza, ime){
     }
     if (najdeno){
         alert("Imeto postoi vo nizata");
-        return pozicija;
+        return pozicija+1;
     }
     else{
         alert("Imeto ne e del od nizata");
@@ -20,6 +20,6 @@ function proverka(niza, ime){
 }
 
 var grupa = ["Ile", "Bojan", "Stojan", "Goran"];
-var papak = "Babus";
+var papak = "Ile";
 var p = proverka(grupa, papak);
 console.log(p);
