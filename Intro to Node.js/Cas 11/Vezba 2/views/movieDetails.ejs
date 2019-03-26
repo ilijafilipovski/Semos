@@ -1,0 +1,28 @@
+<label>Title: <%= film.title %> </label>
+
+<br>
+
+<p>Description: <%= film.description %></p>
+
+<br>
+
+<label>Director: <%= film.director %> </label>
+
+<br>
+
+<label>Producer: <%= film.producer %></label>
+
+<br>
+
+<label>Release date: <%= film.release_date %> </label>
+
+<br>
+<% if(film.people.length > 1 ) { %>
+       <% for(let i = 0 ; i < film.people.length ; i++) { %>
+                <a href="<%= film.people[i] %>">
+                    <%= film.people[i] %>
+                </a>
+                <br>
+        <% } %>
+<% } %>
+<button onclick="window.location='/'">Go back</button>

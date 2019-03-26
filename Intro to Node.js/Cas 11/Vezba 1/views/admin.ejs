@@ -1,0 +1,12 @@
+<h3>Hi from Admin page</h3>
+
+<h4>List of all movies: </h4>
+<br>
+<% for(let i = 0 ; i < nizaFilmovi.length ; i++) { %>
+
+<a href="/movieDetails?title=<%=nizaFilmovi[i].title%>">
+    <%= nizaFilmovi[i].title %>
+</a>
+<% } %>
+<button onclick="window.location='/addNewMovie'">Add new movie</button> <br>
+<button onclick="window.location='/logout'">Log out</button>

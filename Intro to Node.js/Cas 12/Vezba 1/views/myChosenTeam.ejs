@@ -1,0 +1,33 @@
+<h1>
+    <%= team.strTeam %> 
+</h1>
+
+<img src="<%= team.strTeamBadge %>" width="200" height="200">
+
+<h4>
+    League: <%= team.strLeague %>
+</h4>
+
+<label>
+    Manager: 
+    <%= team.strManager %>
+</label>
+
+<br>
+
+<label>
+    Name of the stadium: <%= team.strStadium %>
+</label>
+<br>
+
+<img src="<%= team.strStadiumThumb %>">
+
+<br>
+
+<p>
+    <%= team.strDescriptionEN %>
+</p>
+
+<button onclick="window.location='/allPlayers?team=<%= team.strTeam %> '">
+    See all players
+</button>

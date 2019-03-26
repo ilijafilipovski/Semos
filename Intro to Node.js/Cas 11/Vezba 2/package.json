@@ -1,0 +1,19 @@
+{
+  "name": "vezba2",
+  "version": "1.0.0",
+  "description": "Adding node-module: nodemon . Fetching data from 3th party api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blazenka Parmakova",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

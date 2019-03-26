@@ -1,0 +1,10 @@
+<h3>List of all movies</h3>
+
+<br>
+
+<% for(let i = 0 ; i < movies.length; i++) { %>
+    <a href="/movieDetails?title=<%= movies[i].title %>">
+        <%= movies[i].title %>
+    </a>
+    <br>
+<% } %>

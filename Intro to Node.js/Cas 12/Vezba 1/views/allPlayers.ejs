@@ -1,0 +1,20 @@
+<h1>All players</h1>
+
+<% for( let i = 0 ; i < players.length; i++) { %>
+<label>
+    <%= players[i].strPlayer %>
+</label>
+<br>
+<label>
+    <%= players[i].strNationality %>
+</label>
+<br>
+<label>
+    <%= players[i].strWage %>
+</label>
+<br>
+<p>
+    <%= players[i].strDescriptionEN %>
+</p>
+<hr>
+<% } %>
