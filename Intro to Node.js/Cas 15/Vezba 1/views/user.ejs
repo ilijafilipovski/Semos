@@ -1,0 +1,40 @@
+<h3>User page</h3>
+
+<h4>
+    List of all movies:
+</h4>
+    <% for( var i = 0 ; i < userInformations.movies.length ; i++) { %>
+        <label>
+            Title : <%= userInformations.movies[i].title %> 
+        </label> 
+        <br>
+        <label>
+            Year : <%= userInformations.movies[i].year %> 
+        </label> 
+        <br>
+        <label>
+            Produced by : <%= userInformations.movies[i].produced_by %> 
+        </label> 
+        <br>
+    <% } %>
+
+<h4>
+    List of all books:
+</h4>
+<% for( var i = 0 ; i < userInformations.books.length ; i++) { %>
+    <label>
+        Title : <%= userInformations.books[i].title %> 
+    </label> 
+    <br>
+    <label>
+        Year : <%= userInformations.books[i].year %> 
+    </label> 
+    <br>
+    <label>
+        Written by : <%= userInformations.books[i].written_by %> 
+    </label> 
+    <br>
+<% } %>
+
+<button onclick="window.location='/addMovie'">Add movie</button>
+<button onclick="window.location='/addBook'">Add book</button>

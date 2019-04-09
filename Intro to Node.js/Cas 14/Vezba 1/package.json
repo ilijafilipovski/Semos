@@ -1,0 +1,14 @@
+{
+  "name": "vezba1",
+  "version": "1.0.0",
+  "description": "mongoose scheme project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilija Filipovski",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.4.20"
+  }
+}
