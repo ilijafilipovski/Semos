@@ -1,36 +1,116 @@
+// var c = 0;
+// for(var i = 0; i < 100; i++){
+//     if(i % 2 == 0 && i != 0){
+//         c++;
+//         if(c === 3) {
+//             console.log(i);
+//             c = 0;
+//         }
+//     }
+// }
+
+// for(var i = 0; i < 100; i++){
+//     if(i % 2 == 0 && i % 3 == 0){
+//         console.log(i);
+//     }
+// }
+
+
+var niza = [];
+niza[100] = 'Pero';
+console.log(niza);
+console.log(niza[0]);
+console.log(niza.length);
+
+var c = 0;
+for(var i in niza){
+    c++;
+}
+console.log(c);
+
+
+
+niza[2] = () => {
+    console.log('niza vo funkcija');
+    return () => {
+        console.log('vtora niza vo funkcija');
+    }
+}
+
+niza[2]()();
+
+niza['ime'] = 'Pero';
+console.log(niza.ime);
+console.log(niza);
+
+
+
+
 var studenti = [
-    {ime: "Pero", prezime: "Perovski", prosek: 7.2},
-    {ime: "Ivan", prezime: "Ivanovski", prosek: 9.3},
-    {ime: "Aleksandar", prezime: "Aleksandrov", prosek: 7.1},
-    {ime: "Ana", prezime: "Aneva", prosek: 9.7}
+    {ime: 'Pero', prezime: 'Perovski', prosek: 7.2},
+    {ime: 'Ivan', prezime: 'Ivanovski', prosek: 9.3},
+    {ime: 'Aleksandar', prezime: 'Aleksandrov', prosek: 7.1},
+    {ime: 'Ana', prezime: 'Aneva', prosek: 9.7}
 ];
 
-var najdolgoPrezime;
-var najkratkoIme;
-var sredenProsek=0;
-var c = 0;
 
-var prezime1 = 0;
-var ime1 = 100;
+var p = 0;
+var pCount = 0;
+var prezime = 0;
+var ime = 0;
 
 for(var i in studenti){
-
-    if(studenti[i].prezime.length > prezime1){
-        prezime1 = studenti[i].prezime.length;
-        najdolgoPrezime = studenti[i].prezime;
+    // sreden prosek na studentite
+    p += studenti[i].prosek;
+    pCount++;
+    // najdolgo prezime
+    if(studenti[i].prezime.length > studenti[prezime].prezime.length){
+        prezime = i;
     }
-    if(studenti[i].ime.length < ime1){
-        ime1 = studenti[i].ime.length;
-        najkratkoIme = studenti[i].ime;
+    // najkratko ime
+    if(studenti[i].ime.length < studenti[ime].ime.length){
+        ime = i;
     }
-
-    sredenProsek = (sredenProsek + studenti[i].prosek);
-    c++;
-
 }
-sredenProsek = sredenProsek/c;
-console.log("Najdolgo prezime = " + najdolgoPrezime);
-console.log('Najkratko ime = ' + najkratkoIme);
-console.log("Sreden prosek = " + sredenProsek);
+
+console.log('Prosek:', (p / pCount), 'Prezime:', studenti[prezime].prezime, 'Ime:', studenti[ime].ime);
+
+// var n = [];
+// n[0] = 'a';
+// n[1] = 'b';
+// n[2] = 'c';
+// n[102] = 'c';
+
+// console.log(n.length);
+
+// for(var i = 0; i < 100; i++){
+//     console.log('TEST');
+// }
+
+// for(var i in n){
+
+// }
 
 
+// var obj = {
+//     ime: 'Pero',
+//     prezime: 'Perovski',
+//     grad: 'Skopje'
+// };
+
+// for(var i in obj){
+//     console.log(i);
+// }
+
+// n.forEach((v, i) => {
+//     console.log(v, i);
+// });
+
+var niza = [
+    {ime: "P", prezime: 'Pp'},
+    {ime: "O", prezime: 'Oo'},
+];
+
+for(var i in niza){
+    console.log(niza[i].prezime);
+}

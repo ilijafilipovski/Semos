@@ -1,104 +1,222 @@
-var ime = "Ilija" // String
-var godini = 23 // Number - Integer
-var visina = 1.82 // Number - Float
-var vikend = false // Boolean
+console.log('TEST');
 
-// var condition = true && (true || false) || false;
-// if(condition){
-//     console.log("TRUE");
-// } else {
-//     console.log("FALSE");
-// }
+var ime = 'Bojan'; // String
+var godini = 36; // Number - Integer
+var visina = 1.82; // Number - Float
+var vikend = false; // Boolean
 
-// var bukva = "A";
-// switch(bukva){
-//     case "A":
-//         console.log("bukva A");
-//         break;
-//     case "B":
-//         console.log("bukva B");
-//         break;
-//     case "C":
-//         console.log("bukva C");
-//         break;
-//     default:
-//         console.log("nepoznata bukva");
-//         break;        
-    
-// }
+var condition = 
+    true && 
+    (true || false) || 
+    false
 
-// function zdravo(){
-//     console.log("Zdravo" + ime);
-// }
-// var pozdrav = function(){
-//     console.log("Zdravo" + ime);
-// }
-
-// var hello = () => {
-//     console.log("Zdravo" + ime);
-
-// }
-
-// var calc = (a,b) => {
-//     return a+b;
-// }
-
-// var rez = calc(2,6);
-
-var call = (a, b, fn) => {
-    fn(a+b);
-}   
-
-call(4, 7, (r)=>{
-    console.log(r*2);
-})
-
-
-var calc = (a,b,op,cb) => {
-    let r = a + b;
-    cb(r, op);
+if(condition){
+    console.log('TRUE');
+} else {
+    console.log('FALSE');
 }
 
-var math = (r, op) => {
-    switch(op){
-        case "div":
-            console.log(r/2);
+if(condition){
+    // ...
+}
+
+if(condition){
+    // ...
+} else {
+    // ...
+}
+
+if(condition){
+    // ...
+} else if(condition){
+    // ...  
+} else if(condition){
+    // ...
+} else {
+    // ...
+}
+
+var bukva = 'A';
+
+switch(bukva){
+    case 'A':
+        console.log('bukva A');
+        break;
+    case 'B':
+        console.log('bukva B');
+        break;
+    case 'C':
+        console.log('bukva C');
+        break;
+    default:
+        console.log('nepoznata bukva');
+        break;
+}
+
+function zdravo() {
+    console.log('Helloz!');
+}
+
+var pozdrav = function() {
+    console.log('Helloz!');
+}
+
+var hello = () => {
+    console.log('Helloz!');
+}
+
+var calc = (a, b) => {
+    return a + b;
+}
+
+var res = calc(2, 6);
+console.log(res);
+
+
+
+
+var call = (a, b, pero) => {
+    var c = a + b;
+    pero(c);
+}
+
+var inside = (r) => {
+    console.log(r * 2);
+}
+
+call(4, 7, inside);
+
+var broj = 10;
+inside(broj);
+
+
+var name = 'Pero';
+var ime = name;
+console.log(ime);
+
+
+
+// calc( 2,7, 'div', fn);
+
+// div res / 2
+// mul res * 2
+// sub res - 2
+// add res + 2
+
+var calc = (a, b, op, cb) => {
+    cb(a + b, op); // 34, 'div'
+}
+
+var math = (r, o) => {
+    switch(o){
+        case 'div':
+            console.log(r / 2);
             break;
-        case "mul":
-            console.log(r*2);
+        case 'mul':
+            console.log(r * 2);
             break;
-        case "sub":
-            console.log(r - 1);
+        case 'sub':
+            console.log(r - 2);
             break;
-        case "add":
+        case 'add':
             console.log(r + 2);
-            break;
-        default:
-            console.log("vnesi validna operacija");
             break;
     }
 }
 
-var rez = calc(2,7,"div",math);
+calc(23, 11, 'div', math);
 
-console.log(rez);
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then(response => response.json())
+// .then(json => console.log(json))
+// .catch(err => {
+    
+// })
 
-var ime = "Pero";
+var ime = 'Janko';
 
 var vetuvanje = () => {
-    return new Promise((succ, fail)=>{
-        if(ime === "Pero"){
+    return new Promise((succ, fail) => { // succ & fail are functions
+        if(ime == 'Pero'){
             return succ(ime);
         }
         return fail(ime);
-        }
-    )
+    });
 }
 
 vetuvanje()
-.then(i=> {
-    console.log(i);
-});
+    .then(
+        i => {
+            console.log('SUCCESS ', i);
+        },
+        i => {
+            console.log('FAIL ', i);
+        }
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
