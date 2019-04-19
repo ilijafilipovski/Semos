@@ -5,18 +5,20 @@ const dbParams = {
     port: "27017",
     username: "",
     password: "",
-    dbname: "filmoteka"
+    db: "movies"
+
+
 }
 
 var init = () => {
-    mongoose.connect(`mongodb://${dbParams.host}:${dbParams.port}/${dbParams.dbname}`, {useNewUrlParser: true})
+    mongoose.connect(`mongodb://${dbParams.host}:${dbParams.port}/${dbParams.db}`, {useNewUrlParser: true}
+    )
     .then(() => {
-        console.log("Connected to MongoDB")
+        console.log("MongoDB started");
     })
     .catch(err => {
         console.error(err);
     })
-
 }
 
 module.exports = {
